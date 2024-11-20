@@ -10,7 +10,7 @@ from django.contrib import messages
 class LoginView(View):
     def get(self,request):
         form=LoginForm()
-        return render(request,'login.html',{"form":form})
+        return render(request,'index.html',{"form":form})
     def post(self,request):
         formdata=LoginForm(data=request.POST)
         if formdata.is_valid():
